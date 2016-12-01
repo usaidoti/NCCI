@@ -41,7 +41,7 @@ server<-function(input, output) {
     print(p)
     
   })
-  # Generate an HTML table view of the data
+  # Generate an HTML table view of the data; when updating, add links to new tables
   output$table <- DT::renderDataTable({
     DT::datatable(NCCIbind, options = list(orderClasses = TRUE, pageLength = 25))
   })
@@ -208,7 +208,7 @@ ui<-pageWithSidebar(
     downloadButton('downloadData', 'Download data')
   ),
   
-  # Show the caption and plot of the requested variable
+  # Main panel with plot, table and links to surveys; when updating, add new tables to bottom of list
   mainPanel(
     h3(textOutput("caption")),
     tabsetPanel(type="tabs",
