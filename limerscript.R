@@ -117,3 +117,15 @@ DIF048c$Q15<-NULL
 #Comine tables
 
 NCCIbind <- rbind.fill(AGA041c, AGA045c, AGA051c, AGA055c, AGA059c, AGA060c, AGA061c, DIF010c, DIF018c, DIF044c,NIA029c, TILL006c, TILL007c, TILL009c, DIF048c)
+
+#Replace numerical codes with text labels
+
+NCCIbind$Language <- factor(NCCIbind$Q1, levels = c(1,2,3,4,5,6,7,8), labels = c("Haussa", "Français", "Toubou", "Tamasheq","Kanouri","Zarma","Fulfulde Adamawa","Arabe"))
+NCCIbind$Region <- factor(NCCIbind$Q2, levels = c(1,2,3,4,"-oth-"), labels = c("Agadez","Diffa","Niamey","Tillabery","Other"))
+NCCIbind$Age.Group<-cut(NCCIbind$Q7,breaks=c(0,17,30,45,60,100), labels=c("Under 18","18-30","31-45","46-60","60+" ))
+NCCIbind$Ethnicity <- factor(NCCIbind$Q9, levels = c(1,2,3,4,5,6,7,8), labels = c("Haussa", "Touareg", "Peul", "Zarma/Songhai","Toubou","Kanouri","Arabe","Je préfère ne pas répondre"))
+NCCIbind$Gender<-NCCIbind$Q8
+NCCIbind$Participation<-factor(NCCIbind$Q10, labels = c("Je suis un jeune participant à la formation et un membre de l’équipe qui va bénéficier des unités de production d’eau","Je suis un organisateur (autorité, partenaire)","Je suis un membre de la communauté (spectateur de processus)", "Sans réponse" ))
+NCCIbind$Selection.Beneficiaries <- factor(NCCIbind$Q17, levels = c(1,2,3,4,5,6), labels = c("Très juste", "Juste", "Neutre", "Peu juste","Très injuste","Sans Response"))
+
+
