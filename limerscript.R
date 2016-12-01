@@ -21,7 +21,6 @@ date<-Sys.time()
 
 #Download surveys. Check 'survey_df' table for any new files and add to list below.
 
-
 AGA046<-get_responses(iSurveyID= 954197, sLanguageCode = 'fr', sResponseType = 'short')
 DIF010<-get_responses(iSurveyID= 397193, sLanguageCode = 'fr', sResponseType = 'short')
 AGA051<-get_responses(iSurveyID= 335852, sLanguageCode = 'fr', sResponseType = 'short')
@@ -40,6 +39,27 @@ TILL007<-get_responses(iSurveyID= 943461, sLanguageCode = 'fr', sResponseType = 
 TILL009<-get_responses(iSurveyID= 541311, sLanguageCode = 'fr', sResponseType = 'short')
 DIF040<-get_responses(iSurveyID= 448111, sLanguageCode = 'fr', sResponseType = 'short')
 DIF048<-get_responses(iSurveyID= 716422, sLanguageCode = 'fr', sResponseType = 'short')
+
+#Make copies with only the columns of interest, also excluding empty surveys
+
+AGA041c <- AGA041[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
+AGA045c <- AGA045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
+#AGA046c <- AGA046[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17")]
+AGA051c <- AGA051[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+AGA055c <- AGA055[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+AGA059c <- AGA059[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
+AGA060c <- AGA060[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q16","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
+AGA061c <- AGA061[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
+DIF010c <- DIF010[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+DIF018c <- DIF018[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+DIF044c <- DIF044[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+NIA029c <- NIA029[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+TILL006c <- TILL006[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
+TILL007c <- TILL007[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
+TILL009c <- TILL009[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q25.1.","Q25.2.","Q25.3.","Q25.4.")]
+#DIF040c <- DIF040[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
+DIF048c <- DIF048[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
+
 
 #Move misaligned columns to desired, consistent location
 
