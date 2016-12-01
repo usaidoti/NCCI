@@ -129,3 +129,22 @@ NCCIbind$Participation<-factor(NCCIbind$Q10, labels = c("Je suis un jeune partic
 NCCIbind$Selection.Beneficiaries <- factor(NCCIbind$Q17, levels = c(1,2,3,4,5,6), labels = c("Très juste", "Juste", "Neutre", "Peu juste","Très injuste","Sans Response"))
 
 
+#Create separate table for ‘multiple selection’ questions
+
+NCCImelt2 = melt(subset(NCCIbind, Q41.1.=="Y" | Q41.2.=="Y" | Q41.3.=="Y" | Q41.4.=="Y"), id.vars=c("Q1","Q2","Q6","Q7","Q8","Q9","Q10"), measure.vars=c("Q41.1.","Q41.2.","Q41.3.","Q41.4."))
+NCCImelt2$QForm <- paste(NCCImelt2$variable,NCCImelt2$value)
+NCCImelt2$Comment.Entendu <- factor(NCCImelt2$QForm, levels = c("Q41.1. Y","Q41.2. Y", "Q41.3. Y", "Q41.4. Y"), labels = c("Via les cartes d’information ", "Au travers d’annonces pendant l’activité ", "A la radio", "Par le bouche à oreille"))
+NCCImelt2$QForm<-NULL
+
+NCCIbind$Cartes.information<-NCCIbind$Q41.1.
+NCCIbind$Annonces.pendant<-NCCIbind$Q41.2.
+NCCIbind$radio<-NCCIbind$Q41.3.
+NCCIbind$bouche.orielle<-NCCIbind$Q41.4.
+
+NCCIbind$Q41.1.<-NULL
+NCCIbind$Q41.2.<-NULL
+NCCIbind$Q41.3.<-NULL
+NCCIbind$Q41.4.<-NULL
+
+save.image()
+
