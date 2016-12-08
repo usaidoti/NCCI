@@ -39,6 +39,7 @@ TILL007<-get_responses(iSurveyID= 943461, sLanguageCode = 'fr', sResponseType = 
 TILL009<-get_responses(iSurveyID= 541311, sLanguageCode = 'fr', sResponseType = 'short')
 DIF040<-get_responses(iSurveyID= 448111, sLanguageCode = 'fr', sResponseType = 'short')
 DIF048<-get_responses(iSurveyID= 716422, sLanguageCode = 'fr', sResponseType = 'short')
+DOF045<-get_responses(iSurveyID= 259664, sLanguageCode = 'fr', sResponseType = 'short')
 
 #Make copies with only the columns of interest, also excluding empty surveys
 
@@ -59,6 +60,7 @@ TILL007c <- TILL007[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q23.1.","Q23.2.","Q23
 TILL009c <- TILL009[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q25.1.","Q25.2.","Q25.3.","Q25.4.")]
 #DIF040c <- DIF040[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF048c <- DIF048[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
+DIF045c <- DIF045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 
 
 #Move misaligned columns to desired, consistent location
@@ -100,6 +102,11 @@ DIF048c$Q41.3.<-DIF048c$Q16.3.
 DIF048c$Q41.4.<- NA
 DIF048c$Q17<-DIF048c$Q15
 
+DIF045c$Q41.1.<-DIF045c$Q16.1.
+DIF045c$Q41.2.<-DIF045c$Q16.2.
+DIF045c$Q41.3.<-DIF045c$Q16.3.
+DIF045c$Q41.4.<- NA
+DIF045c$Q17<-DIF045c$Q15
 
 AGA059c$Q23.1.<-NULL
 AGA059c$Q23.2.<-NULL
@@ -133,6 +140,11 @@ DIF048c$Q16.1.<-NULL
 DIF048c$Q16.2.<-NULL
 DIF048c$Q16.3.<-NULL
 DIF048c$Q15<-NULL
+
+DIF045c$Q16.1.<-NULL
+DIF045c$Q16.2.<-NULL
+DIF045c$Q16.3.<-NULL
+DIF045c$Q15<-NULL
 
 #Comine tables
 
