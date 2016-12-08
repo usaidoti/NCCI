@@ -62,6 +62,24 @@ TILL009c <- TILL009[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q25.1.","Q25.2.
 DIF048c <- DIF048[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF045c <- DIF045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 
+AGA041c$Survey <- 'AGA041'
+AGA045c$Survey <- 'AGA045'
+#AGA046c$Survey <- 'AGA046'
+AGA051c$Survey <- 'AGA051'
+AGA055c$Survey <- 'AGA055'
+AGA059c$Survey <- 'AGA059'
+AGA060c$Survey <- 'AGA060'
+AGA061c$Survey <- 'AGA061'
+DIF010c$Survey <- 'DIF010'
+DIF018c$Survey <- 'DIF018'
+DIF044c$Survey <- 'DIF044'
+NIA029c$Survey <- 'NIA029'
+TILL006c$Survey <- 'TILL006'
+TILL007c$Survey <- 'TILL007'
+TILL009c$Survey <- 'TILL009'
+#DIF040c$Survey <- 'DIF040'
+DIF048c$Survey <- 'DIF048'
+DIF045c$Survey <- 'DIF045'
 
 #Move misaligned columns to desired, consistent location
 
