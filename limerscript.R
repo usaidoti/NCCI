@@ -175,7 +175,7 @@ NCCIbind$Region <- factor(NCCIbind$Q2, levels = c(1,2,3,4,"-oth-"), labels = c("
 NCCIbind$Age.Group<-cut(NCCIbind$Q7,breaks=c(0,17,30,45,60,100), labels=c("Under 18","18-30","31-45","46-60","60+" ))
 NCCIbind$Ethnicity <- factor(NCCIbind$Q9, levels = c(1,2,3,4,5,6,7,8), labels = c("Haussa", "Touareg", "Peul", "Zarma/Songhai","Toubou","Kanouri","Arabe","Je préfère ne pas répondre"))
 NCCIbind$Gender<-NCCIbind$Q8
-NCCIbind$Participation<-factor(NCCIbind$Q10, labels = c("Je suis un jeune participant à la formation et un membre de l’équipe qui va bénéficier des unités de production d’eau","Je suis un organisateur (autorité, partenaire)","Je suis un membre de la communauté (spectateur de processus)", "Sans réponse" ))
+NCCIbind$Participation<-factor(NCCIbind$Q10, labels = c("Je suis un jeune participant à la formation et un membre de l'équipe qui va bénéficier des unités de production d'eau","Je suis un organisateur (autorité, partenaire)","Je suis un membre de la communauté (spectateur de processus)", "Sans réponse" ))
 NCCIbind$Selection.Beneficiaries <- factor(NCCIbind$Q17, levels = c(1,2,3,4,5,6), labels = c("Très juste", "Juste", "Neutre", "Peu juste","Très injuste","Sans Response"))
 
 
@@ -183,7 +183,7 @@ NCCIbind$Selection.Beneficiaries <- factor(NCCIbind$Q17, levels = c(1,2,3,4,5,6)
 
 NCCImelt2 = melt(subset(NCCIbind, Q41.1.=="Y" | Q41.2.=="Y" | Q41.3.=="Y" | Q41.4.=="Y"), id.vars=c("Q1","Q2","Q6","Q7","Q8","Q9","Q10"), measure.vars=c("Q41.1.","Q41.2.","Q41.3.","Q41.4."))
 NCCImelt2$QForm <- paste(NCCImelt2$variable,NCCImelt2$value)
-NCCImelt2$Comment.Entendu <- factor(NCCImelt2$QForm, levels = c("Q41.1. Y","Q41.2. Y", "Q41.3. Y", "Q41.4. Y"), labels = c("Via les cartes d’information ", "Au travers d’annonces pendant l’activité ", "A la radio", "Par le bouche à oreille"))
+NCCImelt2$Comment.Entendu <- factor(NCCImelt2$QForm, levels = c("Q41.1. Y","Q41.2. Y", "Q41.3. Y", "Q41.4. Y"), labels = c("Via les cartes d'information ", "Au travers d'annonces pendant l'activité ", "A la radio", "Par le bouche à oreille"))
 NCCImelt2$QForm<-NULL
 
 NCCIbind$Cartes.information<-NCCIbind$Q41.1.
