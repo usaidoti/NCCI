@@ -177,6 +177,13 @@ server<-function(input, output) {
     content = function(file) {
       write.csv(DIF048, file)
     } )
+   output$DIF045 <- downloadHandler(
+    filename = function() {
+      paste("DIF045-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(DIF045, file)
+    } )
   
   output$total <-  renderText({
     paste0(nrow(NCCIbind)) 
@@ -239,8 +246,8 @@ ui<-pageWithSidebar(
                          downloadLink("TILL007", "TILL007"),br(),
                          downloadLink("TILL009", "TILL009"),br(),
                          downloadLink("DIF040", "DIF040"),br(),
-                         downloadLink("DIF048", "DIF048"))
-                        
+                         downloadLink("DIF048", "DIF048")),br(),
+                        downloadLink("DIF045", "DIF045"))
     )
   ))
 
