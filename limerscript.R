@@ -39,7 +39,7 @@ TILL007<-get_responses(iSurveyID= 943461, sLanguageCode = 'fr', sResponseType = 
 TILL009<-get_responses(iSurveyID= 541311, sLanguageCode = 'fr', sResponseType = 'short')
 DIF040<-get_responses(iSurveyID= 448111, sLanguageCode = 'fr', sResponseType = 'short')
 DIF048<-get_responses(iSurveyID= 716422, sLanguageCode = 'fr', sResponseType = 'short')
-DOF045<-get_responses(iSurveyID= 259664, sLanguageCode = 'fr', sResponseType = 'short')
+DIF045<-get_responses(iSurveyID= 259664, sLanguageCode = 'fr', sResponseType = 'short')
 
 #Make copies with only the columns of interest, also excluding empty surveys
 
