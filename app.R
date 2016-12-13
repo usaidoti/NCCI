@@ -184,7 +184,7 @@ server<-function(input, output) {
     content = function(file) {
       write.csv(DIF045, file)
     } )
-       output$DIF045 <- downloadHandler(
+       output$AGA062 <- downloadHandler(
     filename = function() {
       paste("AGA062-", date, ".csv", sep="")
     },
