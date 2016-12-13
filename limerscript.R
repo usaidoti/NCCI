@@ -40,6 +40,7 @@ TILL009<-get_responses(iSurveyID= 541311, sLanguageCode = 'fr', sResponseType = 
 DIF040<-get_responses(iSurveyID= 448111, sLanguageCode = 'fr', sResponseType = 'short')
 DIF048<-get_responses(iSurveyID= 716422, sLanguageCode = 'fr', sResponseType = 'short')
 DIF045<-get_responses(iSurveyID= 259664, sLanguageCode = 'fr', sResponseType = 'short')
+AGA062<-get_responses(iSurveyID= 517332, sLanguageCode = 'fr', sResponseType = 'short')
 
 #Make copies with only the columns of interest, also excluding empty surveys
 
@@ -61,6 +62,7 @@ TILL009c <- TILL009[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q25.1.","Q25.2.
 #DIF040c <- DIF040[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF048c <- DIF048[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF045c <- DIF045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
+AGA062c <- AGA062[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q18","Q32.1.","Q32.2.","Q32.3.","Q32.4.")]
 
 AGA041c$Survey <- 'AGA041'
 AGA045c$Survey <- 'AGA045'
@@ -80,6 +82,7 @@ TILL009c$Survey <- 'TILL009'
 #DIF040c$Survey <- 'DIF040'
 DIF048c$Survey <- 'DIF048'
 DIF045c$Survey <- 'DIF045'
+AGA062c$Survey <- 'AGA062'
 
 #Move misaligned columns to desired, consistent location
 
@@ -125,6 +128,12 @@ DIF045c$Q41.2.<-DIF045c$Q16.2.
 DIF045c$Q41.3.<-DIF045c$Q16.3.
 DIF045c$Q41.4.<- NA
 DIF045c$Q17<-DIF045c$Q15
+
+AGA062c$Q41.1.<-AGA062c$Q32.1.
+AGA062c$Q41.2.<-AGA062c$Q32.2.
+AGA062c$Q41.3.<-AGA062c$Q32.3.
+AGA062c$Q41.4.<- AGA062c$Q32.4.
+AGA062c$Q17<-AGA062c$Q18
 
 AGA059c$Q23.1.<-NULL
 AGA059c$Q23.2.<-NULL
