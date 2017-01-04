@@ -191,7 +191,23 @@ server<-function(input, output) {
     content = function(file) {
       write.csv(AGA062, file)
     } )
-  
+     output$AGA031 <- downloadHandler(
+    filename = function() {
+      paste("AGA031-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(AGA031, file)
+    } )
+       output$DIF038 <- downloadHandler(
+    filename = function() {
+      paste("DIF038-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(DIF038, file)
+    } )
+    
+    
+    
   output$total <-  renderText({
     paste0(nrow(NCCIbind)) 
   })
@@ -255,7 +271,9 @@ ui<-pageWithSidebar(
                          downloadLink("DIF040", "DIF040"),br(),
                          downloadLink("DIF048", "DIF048"),br(),
                         downloadLink("DIF045", "DIF045"),br(),
-                        downloadLink("AGA062", "AGA062"))
+                        downloadLink("AGA062", "AGA062"),br(),
+                        downloadLink("AGA031", "AGA031"),br(),
+                        downloadLink("DIF038", "DIF038"))
     )
   ))
 
