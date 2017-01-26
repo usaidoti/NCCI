@@ -43,6 +43,9 @@ DIF045<-get_responses(iSurveyID= 259664, sLanguageCode = 'fr', sResponseType = '
 AGA062<-get_responses(iSurveyID= 517332, sLanguageCode = 'fr', sResponseType = 'short')
 DIF038<-get_responses(iSurveyID= 852367, sLanguageCode = 'fr', sResponseType = 'short')
 AGA031<-get_responses(iSurveyID= 584813, sLanguageCode = 'fr', sResponseType = 'short')
+CFWNM2<-get_responses(iSurveyID= 376845, sLanguageCode = 'fr', sResponseType = 'short')
+TIL016<-get_responses(iSurveyID= 521157, sLanguageCode = 'fr', sResponseType = 'short')
+AGA066<-get_responses(iSurveyID= 854153, sLanguageCode = 'fr', sResponseType = 'short')
 
 #Make copies with only the columns of interest, also excluding empty surveys
 
@@ -67,6 +70,10 @@ DIF045c <- DIF045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.",
 AGA062c <- AGA062[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q18","Q32.1.","Q32.2.","Q32.3.","Q32.4.")]
 DIF038c <- DIF038[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q16","Q32.1.","Q32.2.","Q32.3.","Q32.4.")]
 AGA031c <- AGA031[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q45","Q53.1.","Q53.2.","Q53.3.","Q53.4.")]
+CFWNM2c <- CFWNM2[c("Q1","Q2","Q6","Q7","Q8","Q9","Q11","Q33","Q34.1.","Q34.2.","Q34.3.","Q34.4.")]
+TIL016c <- TIL016[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q27.1.","Q27.2.","Q27.3.","Q27.4.")]
+AGA066c <- AGA066[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+
 
 #Add identification column
 
@@ -91,6 +98,9 @@ DIF045c$Survey <- 'DIF045'
 AGA062c$Survey <- 'AGA062'
 DIF038c$Survey <- 'DIF038'
 AGA031c$Survey <- 'AGA031'
+CFWNM2c$Survey <- 'CFWNM2c'
+TIL016c$Survey <- 'TIL016c'
+AGA066c$Survey <- 'AGA066c'
 
 #Move misaligned columns to desired, consistent location
 
@@ -208,6 +218,32 @@ AGA031c$Q53.2.<- NULL
 AGA031c$Q53.3.<- NULL
 AGA031c$Q53.4.<- NULL
 AGA031c$Q45<- NULL
+
+CFWNM2c$Q17<-CFWNM2c$Q33
+CFWNM2c$Q41.1.<-CFWNM2c$Q34.1.
+CFWNM2c$Q41.2.<-CFWNM2c$Q34.2.
+CFWNM2c$Q41.3.<-CFWNM2c$Q34.3.
+CFWNM2c$Q41.4.<-CFWNM2c$Q34.4.
+CFWNM2c$Q33<-NULL
+CFWNM2c$Q34.1.<-NULL
+CFWNM2c$Q34.2.<-NULL
+CFWNM2c$Q34.3.<-NULL
+CFWNM2c$Q34.4.<-NULL
+
+TIL016c$Q17<-TIL016c$Q21
+TIL016c$Q41.1.<-TIL016c$Q27.1.
+TIL016c$Q41.2.<-TIL016c$Q27.2.
+TIL016c$Q41.3.<-TIL016c$Q27.3.
+TIL016c$Q41.4.<-TIL016c$Q27.4.
+TIL016c$Q21<-NULL
+TIL016c$Q27.1.<-NULL
+TIL016c$Q27.2.<-NULL
+TIL016c$Q27.3.<-NULL
+TIL016c$Q27.4.<-NULL
+
+
+
+
 
 
 #Combine tables
