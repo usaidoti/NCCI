@@ -205,7 +205,27 @@ server<-function(input, output) {
     content = function(file) {
       write.csv(DIF038, file)
     } )
-    
+       output$CFWNM2 <- downloadHandler(
+    filename = function() {
+      paste("CFWNamlewaMada2-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(CFWNM2, file)
+    } )
+        output$TIL016 <- downloadHandler(
+    filename = function() {
+      paste("TIL016-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(TIl016, file)
+    } )
+    output$AGA066 <- downloadHandler(
+    filename = function() {
+      paste("AGA066-", date, ".csv", sep="")
+    },
+    content = function(file) {
+      write.csv(AGA066, file)
+    } )
     
     
   output$total <-  renderText({
@@ -273,7 +293,10 @@ ui<-pageWithSidebar(
                         downloadLink("DIF045", "DIF045"),br(),
                         downloadLink("AGA062", "AGA062"),br(),
                         downloadLink("AGA031", "AGA031"),br(),
-                        downloadLink("DIF038", "DIF038"))
+                        downloadLink("DIF038", "DIF038"),br(),
+                         downloadLink("CFWNM2", "CFWNM2"),br(),
+                        downloadLink("TIL016", "TIL016"),br(),
+                         downloadLink("AGA066", "AGA066"))
     )
   ))
 
