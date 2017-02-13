@@ -46,6 +46,12 @@ AGA031<-get_responses(iSurveyID= 584813, sLanguageCode = 'fr', sResponseType = '
 CFWNM2<-get_responses(iSurveyID= 376845, sLanguageCode = 'fr', sResponseType = 'short')
 TIL016<-get_responses(iSurveyID= 521157, sLanguageCode = 'fr', sResponseType = 'short')
 AGA066<-get_responses(iSurveyID= 854153, sLanguageCode = 'fr', sResponseType = 'short')
+DIF050<-get_responses(iSurveyID= 768344, sLanguageCode = 'fr', sResponseType = 'short')
+AGA063<-get_responses(iSurveyID= 265525, sLanguageCode = 'fr', sResponseType = 'short')
+TIL018<-get_responses(iSurveyID= 826566, sLanguageCode = 'fr', sResponseType = 'short')
+TIL010<-get_responses(iSurveyID= 884843, sLanguageCode = 'fr', sResponseType = 'short')
+TIL004<-get_responses(iSurveyID= 696635, sLanguageCode = 'fr', sResponseType = 'short')
+
 
 #Make copies with only the columns of interest, also excluding empty surveys
 
@@ -57,6 +63,7 @@ AGA055c <- AGA055[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3
 AGA059c <- AGA059[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
 AGA060c <- AGA060[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q16","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
 AGA061c <- AGA061[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
+DIF059c <- DIF059[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10",,"Q13","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
 DIF010c <- DIF010[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
 DIF018c <- DIF018[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
 DIF044c <- DIF044[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
@@ -64,7 +71,7 @@ NIA029c <- NIA029[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q41.1.","Q41.2.","Q41.3
 TILL006c <- TILL006[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10")]
 TILL007c <- TILL007[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q23.1.","Q23.2.","Q23.3.","Q23.4.")]
 TILL009c <- TILL009[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q25.1.","Q25.2.","Q25.3.","Q25.4.")]
-#DIF040c <- DIF040[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
+DIF040c <- DIF040[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF048c <- DIF048[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 DIF045c <- DIF045[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15","Q16.1.","Q16.2.","Q16.3.")]
 AGA062c <- AGA062[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q18","Q32.1.","Q32.2.","Q32.3.","Q32.4.")]
@@ -73,6 +80,11 @@ AGA031c <- AGA031[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q45","Q53.1.","Q53.2.",
 CFWNM2c <- CFWNM2[c("Q1","Q2","Q6","Q7","Q8","Q9","Q11","Q33","Q34.1.","Q34.2.","Q34.3.","Q34.4.")]
 TIL016c <- TIL016[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q21","Q27.1.","Q27.2.","Q27.3.","Q27.4.")]
 AGA066c <- AGA066[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q17","Q41.1.","Q41.2.","Q41.3.","Q41.4.")]
+DIF050c <- DIF050[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q15")]
+AGA063c <- AGA063[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q13","Q19.1.","Q19.2.","Q19.3.","Q19.4.")]
+TIL018c <- TIL018[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q26","Q27.1.","Q27.2.","Q27.3.","Q27.4.")]
+TIL010c <- TIL010[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q26","Q27.1.","Q27.2.","Q27.3.","Q27.4.")]
+#TIL004c <- TIL004[c("Q1","Q2","Q6","Q7","Q8","Q9","Q10","Q26","Q27.1.","Q27.2.","Q27.3.","Q27.4.")]
 
 
 #Add identification column
